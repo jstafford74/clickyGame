@@ -16,7 +16,7 @@ class App extends Component {
       '/img/OldSchoolGD.jpg',
       '/img/reddragon.jpg',
       '/img/Scooby-Doo-Air.jpg',
-      'Zombie.jpg'
+      '/img/Zombie.jpg'
     ],
     score: 0,
     topScore: 0
@@ -61,14 +61,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="col-12" id="header"></div>
         <Score score={this.state.score} topScore={this.state.topScore} />
-        {
-          this.state.tiles.map((tile, idx) =>
-            <Thumbnail
-              src={tile} key={idx} onClick={this.handleTileClick}
-            />)
-        }
+        <div className="container-fluid">
+          <div className="row">
 
+            {
+              this.state.tiles.map((tile, idx) =>
+                <Thumbnail
+                  src={tile} key={idx} onClick={this.handleTileClick}
+                />)
+            }
+          </div>
+        </div>
       </div>
     );
   }
