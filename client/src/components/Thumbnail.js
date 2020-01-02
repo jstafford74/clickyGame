@@ -9,7 +9,8 @@ export default function Thumbnail(props) {
   };
 
   return (
-    <div className="col-lg-4 col-md-12 p-2 d-flex justify-content-center">
+    
+    <div className="col-lg-4 col-md-12 d-flex justify-content-center">
       <img
         src={props.src}
         onClick={props.onClick}

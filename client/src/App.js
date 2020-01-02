@@ -26,6 +26,7 @@ class App extends Component {
 
   ];
 
+  
   handleTileClick = (evt) => {
 
     console.log(evt);
@@ -53,17 +54,18 @@ class App extends Component {
       score: newScore,
       topScore: topScore
     });
+
+
   }
 
 
-
-
+  
   render() {
     return (
       <div className="App">
         <div className="col-12" id="header"></div>
         <Score score={this.state.score} topScore={this.state.topScore} />
-        <div className="container-fluid">
+        <div className="container-fluid pt-5" >
           <div className="row">
 
             {
